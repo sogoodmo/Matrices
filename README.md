@@ -1,2 +1,2 @@
-# Mohamed
-This will be first project. It will be on python and I will be making a calculator for matrices. 
+# Matrices
+This program will calculate the dimensions of a given matrix. The determantes. The inverse. And calculations with matricies.
