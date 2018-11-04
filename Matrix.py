@@ -1,15 +1,49 @@
 
-#Entering the dimensions of the matrix 
-Column = input("Enter the amount of columns in your matrix: ")
-while not Column.isdigit():
-    Column = int(input("Error: Enter only whole numbers\nEnter the amount of columns in your matrix: "))
-Column = input("Enter the amount of columns in your matrix: ")
-    while not Column.isdigit():
-        Column = int(input("Error: Enter only whole numbers\nEnter the amount of columns in your matrix: "))
+'''
+Hello. This is my first project where I will be attempting to create a library that can be used to
+find the inverse of a matrix, find the determantes of a matrix, and create a matrix with given numbers. 
 
-def find_dim(Column,Row):
-    
+Start Date: 4/10/2018
+Author: Mohamed Boudjillouli
+'''
+class Matrices:
+    #Creating a matrix given that the user has given me some values.
+
+    def Create_Matrix():
+        while True:
+            try:
+                Column = int(input("Enter the amount of columns in your matrix: "))
+            except ValueError:
+                print("Error: Enter only whole numbers")
+            else:
+                break
+
+        while True:
+            try:
+                Row = int(input("Enter the amount of rows in your matrix: "))
+            except ValueError:
+                print("Error: Enter only whole numbers")
+            else:
+                break
+        Matrix_A = [[]]
+        C_Value_List = []
+        for i in range(Column):
+            C_Value = int(input("Enter the values for the columns of your matrix in order: "))
+            C_Value_List.append(C_Value)
+            Matrix_A.append(C_Value_List)
+            print(Matrix_A)
+            for o in range(Row):
+                R_Value = int(input("Enter the values for the rows for your matrix in order: "))
+                Matrix_A[len(Matrix_A)-1].append(R_Value)
+                print(Matrix_A)
 
 
 
-find_dim()
+
+        
+
+    Create_Matrix()
+
+
+
+
