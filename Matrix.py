@@ -10,12 +10,9 @@ class Matrices:
     #Creating a matrix given that the user has given me some values.
 
     def Create_Matrix(Column, Row, Data):
-        for i in range(Column):
-            
-            for o in range(Row):
-
-        
-
-
-
-
+        for x in range(Row):
+            Main_Matrix.append([])
+            for i in range(Column):
+                Main_Matrix[x].append(Mat_Str[(Column*x)+i])
+                print(i) 
+        print(Main_Matrix)     
