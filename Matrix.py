@@ -9,24 +9,27 @@ Author: Mohamed Boudjillouli
 '''
 
 #Creating a matrix given that the user has given me some values.
-def Create_Matrix(Column, Row):
+def Create_Matrix(Column, Row): #To use this function. Do Matrix.Create_Matrix(Column, Row)
     Main_Matrix = []
 
     #Creating row amount of empty 2d lists 
     for x in range(Row):
         Main_Matrix.append([])
 
-    #Entering value of each matrix one at a time 
+    #Entering value of each matrix one at a time, repeat this Row amount of times
         for i in range(Column):
             Mat_Val = input("Enter the value of your matrix at row " + str(x+1) + " and at column " + str(i+1) + ": ")
             while not Mat_Val.isdigit() :
                   Mat_Val = input("Error: Invalid Matrix\nEnter the value of your matrix at row " + str(x+1) + " and at column " + str(i+1) + ": ")
             Mat_Val = int(Mat_Val)
             Main_Matrix[x].append(Mat_Val)
+    
+    #for each value in the final list, join it in a string with a comma.
     for r in Main_Matrix: 
-        print(' '.join(str(x) for x in r))
+       print(', '.join(str(x) for x in r))
 
-def PlayAgain():
+
+'''def PlayAgain():
     again = str(input("Do you want to play this quiz again? Y/N: ")).lower()
     if again == "no" or again == "n":
         print("Shutting Down...")
@@ -43,7 +46,7 @@ def PlayAgain():
             quit()
         if again == "yes" or again == "y":
             main()
-         
+         '''
        
 
 
