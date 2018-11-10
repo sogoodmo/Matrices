@@ -13,21 +13,15 @@ def main():
 
     if To_do == '1':
         #This is to ensure when they enter the amount of rows and columns that its only a whole number
-        #Can't have a matrix with 2.3 rows
-        while True:
-            try:
-                Column = int(input('Enter the amount of columns in your matrix: '))
-            except ValueError:
-                print('Error: Enter only whole numbers')
-            else:
-                break
-        while True:
-            try:
-                Row = int(input('Enter the amount of rows in your matrix: '))
-            except ValueError:
-                print('Error: Enter only whole numbers')
-            else:
-                break
+        #Can't have a matrix with 2.3
+        Column = input('Enter the amount of columns in your matrix: ')
+        while not Column.isdigit():
+            Column = input('Error: Invalid Input\nEnter the amount of columns in your matrix: ')
+        Row = input('Enter the amount of rows in your matrix: ')
+        while not Row.isdigit():
+            Row = input('Error: Invalid Input\nEnter the amount of rows in your matrix')
+
+        #Calling function and increasing the number of created matrices by 1
         Matrix.Create_Matrix(Column, Row)
         Matrix_Num += 1
 
@@ -46,6 +40,4 @@ def main():
                 print('DO SOME WORK!!!')
 
 
-        
 main()
-
