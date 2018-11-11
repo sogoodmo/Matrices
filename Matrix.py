@@ -3,13 +3,13 @@
 def create_matrix(row,column,list_of_values):
     result_matrix = []
 
-    for x in range(row):
+    for i in range(row):
         result_matrix.append([])
-        for y in range(column):
-            result_matrix[x].append(list_of_values[(column*x)+y])
+        for j in range(column):
+            result_matrix[i].append(list_of_values[(column*i)+j])
 
-    for z in result_matrix: 
-       print(', '.join(str(x) for x in z))
+    for k in result_matrix: 
+       print(', '.join(str(i) for i in k))
 
     return result_matrix
 
@@ -21,10 +21,10 @@ matrix_2 = create_matrix(2,2,[1,2,3,4])
 def add_matrix(matrix_1,matrix_2):
     addition_result_matrix = []
 
-    for t in range(len(matrix_1)):
+    for i in range(len(matrix_1)):
         addition_result_matrix.append([])
-        for u in range(len(matrix_1[0])):
-            addition_result_matrix[t].append(matrix_1[t][u]+matrix_2[t][u])
+        for j in range(len(matrix_1[0])):
+            addition_result_matrix[i].append(matrix_1[i][j]+matrix_2[i][j])
 
     return addition_result_matrix
 
@@ -35,10 +35,10 @@ print(add_matrix(matrix_1,matrix_2))
 def sub_matrix(matrix_1,matrix_2):
     subtraction_result_matrix = []
 
-    for w in range(len(matrix_1)):
+    for i in range(len(matrix_1)):
         subtraction_result_matrix.append([])
-        for v in range(len(matrix_1[0])):
-            subtraction_result_matrix[w].append(matrix_1[w][v]-matrix_2[w][v])
+        for j in range(len(matrix_1[0])):
+            subtraction_result_matrix[i].append(matrix_1[i][j]-matrix_2[i][j])
 
     return subtraction_result_matrix
 print(sub_matrix(matrix_1,matrix_2))
@@ -47,13 +47,11 @@ print(sub_matrix(matrix_1,matrix_2))
 #Sclar multiplication of a matrix
 def scalar_multiplicaton(matrix_1,scale_factor):
     scalar_mult_result_matrix = []
-    print(len(matrix_1))
-    print(len(matrix_1[0]))
 
-    for s in range(len(matrix_1)):                                              #FIX FIX FIX 
-        scalar_mult_result_matrix.append([])                                    #FIX FIX FIX 
-        for r in range(len(matrix_1[0])):                                       #FIX FIX FIX
-            scalar_mult_result_matrix[s].append(matrix_1[r])
+    for i in range(len(matrix_1)):                                              
+        scalar_mult_result_matrix.append([])                                    
+        for j in range(len(matrix_1[0])):                                      
+            scalar_mult_result_matrix[i].append((matrix_1[i][j])*4)
 
     return scalar_mult_result_matrix
 print(scalar_multiplicaton(matrix_1,4))
