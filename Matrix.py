@@ -3,7 +3,6 @@ import time
 '''
 Hello. This is my first project where I will be attempting to create a library that can be used to
 find the inverse of a matrix, find the determantes of a matrix, and create a matrix with given numbers. 
-
 Start Date: 4/10/2018
 Author: Mohamed Boudjillouli
 '''
@@ -48,8 +47,3 @@ def Create_Matrix(Column, Row): #To use this function. Do Matrix.Create_Matrix(C
             main()
          '''
        
-
-
-
-     
-    

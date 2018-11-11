@@ -1,6 +1,7 @@
-z = ('hello')
-a = list(z)
-print(a)
+'''Column = input('Enter the amount of columns in your matrix: ')
+while not Column.isdigit():
+    Column = input('Error: Invalid Input\nEnter the amount of columns in your matrix: ')
+''' 
 
 
 
