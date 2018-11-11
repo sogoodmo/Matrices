@@ -1,49 +1,59 @@
-import time
+#Function 1:
+#Creating a matrix with given rows, columns, and a list of values
+def create_matrix(row,column,list_of_values):
+    result_matrix = []
 
-'''
-Hello. This is my first project where I will be attempting to create a library that can be used to
-find the inverse of a matrix, find the determantes of a matrix, and create a matrix with given numbers. 
-Start Date: 4/10/2018
-Author: Mohamed Boudjillouli
-'''
+    for x in range(row):
+        result_matrix.append([])
+        for y in range(column):
+            result_matrix[x].append(list_of_values[(column*x)+y])
 
-#Creating a matrix given that the user has given me some values.
-def Create_Matrix(Column, Row): #To use this function. Do Matrix.Create_Matrix(Column, Row)
-    Main_Matrix = []
+    for z in result_matrix: 
+       print(', '.join(str(x) for x in z))
 
-    #Creating row amount of empty 2d lists 
-    for x in range(Row):
-        Main_Matrix.append([])
+    return result_matrix
 
-    #Entering value of each matrix one at a time, repeat this Row amount of times
-        for i in range(Column):
-            Mat_Val = input('Enter the value of your matrix at row ' + str(x+1) + ' and at column ' + str(i+1) + ': ')
-            while not Mat_Val.isdigit() :
-                  Mat_Val = input('Error: Invalid Matrix\nEnter the value of your matrix at row ' + str(x+1) + ' and at column ' + str(i+1) + ': ')
-            Mat_Val = int(Mat_Val)
-            Main_Matrix[x].append(Mat_Val)
-    
-    #For each value in the final list, join it in a string with a comma.
-    for r in Main_Matrix: 
-       print(', '.join(str(x) for x in r))
+matrix_1 = create_matrix(2,2,[1,2,3,4])
+matrix_2 = create_matrix(2,2,[1,2,3,4])
 
+#Function 2:
+#Addition with matricies returning a third matrix.
+def add_matrix(matrix_1,matrix_2):
+    addition_result_matrix = []
 
-'''def PlayAgain():
-    again = str(input('Do you want to play this quiz again? Y/N: ')).lower()
-    if again == 'no' or again == 'n':
-        print('Shutting Down...')
-        time.sleep(3)
-        quit()
-    if again == 'yes' or again == 'y':
-        main()
-    #If the input isnt 'Yes, Y, No or N' ask the user to input a valid input.   
-    while (again != 'y') or (again != 'yes') or (again != 'n') or (again != 'no'):
-        again = str(input('Error: Invalid input\nDo you want to play this quiz again? Y/N: ')).lower()
-        if again == 'no' or again == 'n':
-            print('Shutting Down...')
-            time.sleep(3)
-            quit()
-        if again == 'yes' or again == 'y':
-            main()
-         '''
-       
+    for t in range(len(matrix_1)):
+        addition_result_matrix.append([])
+        for u in range(len(matrix_1[0])):
+            addition_result_matrix[t].append(matrix_1[t][u]+matrix_2[t][u])
+
+    return addition_result_matrix
+
+print(add_matrix(matrix_1,matrix_2))
+
+#Function 3:
+#Subtrasction with matricies returning 
+def sub_matrix(matrix_1,matrix_2):
+    subtraction_result_matrix = []
+
+    for w in range(len(matrix_1)):
+        subtraction_result_matrix.append([])
+        for v in range(len(matrix_1[0])):
+            subtraction_result_matrix[w].append(matrix_1[w][v]-matrix_2[w][v])
+
+    return subtraction_result_matrix
+print(sub_matrix(matrix_1,matrix_2))
+
+#Function 4:
+#Sclar multiplication of a matrix
+def scalar_multiplicaton(matrix_1,scale_factor):
+    scalar_mult_result_matrix = []
+    print(len(matrix_1))
+    print(len(matrix_1[0]))
+
+    for s in range(len(matrix_1)):                                              #FIX FIX FIX 
+        scalar_mult_result_matrix.append([])                                    #FIX FIX FIX 
+        for r in range(len(matrix_1[0])):                                       #FIX FIX FIX
+            scalar_mult_result_matrix[s].append(matrix_1[r])
+
+    return scalar_mult_result_matrix
+print(scalar_multiplicaton(matrix_1,4))
