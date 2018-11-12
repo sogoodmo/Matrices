@@ -45,13 +45,34 @@ print(sub_matrix(matrix_1,matrix_2))
 
 #Function 4:
 #Sclar multiplication of a matrix
-def scalar_multiplicaton(matrix_1,scale_factor):
-    scalar_mult_result_matrix = []
+def scalar_multi(matrix_1,scale_factor):
+    scalar_multi_result_matrix = []
 
     for i in range(len(matrix_1)):                                              
-        scalar_mult_result_matrix.append([])                                    
+        scalar_multi_result_matrix.append([])                                    
         for j in range(len(matrix_1[0])):                                      
-            scalar_mult_result_matrix[i].append((matrix_1[i][j])*4)
+            scalar_multi_result_matrix[i].append((matrix_1[i][j])*4)
 
-    return scalar_mult_result_matrix
-print(scalar_multiplicaton(matrix_1,4))
+    return scalar_multi_result_matrix
+print(scalar_multi(matrix_1,4))
+
+#Function 5:
+#Multiplying matricies together
+def matrix_multiply(matrix_1,matrix_2):
+    multi_result_matrix = []
+    val_TO_ADD = 0
+
+    matrix_1_row = len(matrix_1)
+    matrix_1_column = len(matrix_1[0])
+    matrix_2_row = len(matrix_2)
+    matrix_2_column = len(matrix_2[0])
+
+    for i in range(matrix_1_row):
+        multi_result_matrix.append([])
+        for j in range(matrix_2_column):
+            val_TO_ADD = int(str(matrix_1[j][i]))*int(str(matrix_2[i][j])) #BROKEN
+            print(val_TO_ADD)
+
+matrix_multiply(matrix_1,matrix_2) 
+        
+
