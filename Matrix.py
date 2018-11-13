@@ -67,12 +67,10 @@ def matrix_multiply(matrix_1,matrix_2):
     matrix_2_row = len(matrix_2)
     matrix_2_column = len(matrix_2[0])
 
-    for i in range(matrix_1_row):
-        multi_result_matrix.append([])
+    for i in range(matrix_1_row*matrix_2_column):
         for j in range(matrix_2_column):
-            val_TO_ADD = int(str(matrix_1[j][i]))*int(str(matrix_2[i][j])) #BROKEN
-            print(val_TO_ADD)
-
+            multi_result_matrix.append(int(str(matrix_1[j][i]))*int(str(matrix_2[j][i]))) #broken 
+    print(multi_result_matrix)
 matrix_multiply(matrix_1,matrix_2) 
         
 
