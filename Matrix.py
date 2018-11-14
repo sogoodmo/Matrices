@@ -60,8 +60,6 @@ def scalar_multi(matrix_1,scale_factor):
 #Multiplying matricies together
 def matrix_multiply(matrix_1,matrix_2):
     multi_result_matrix = []
-    
-    
 
     matrix_1_row = len(matrix_1)
     matrix_2_column = len(matrix_2[0])
@@ -74,8 +72,6 @@ def matrix_multiply(matrix_1,matrix_2):
             multi_result_matrix.append(element_value)
     print(multi_result_matrix)
 
-    
-    
 matrix_multiply(matrix_1,matrix_2) 
         
 
