@@ -65,7 +65,7 @@ def matrix_multiply(matrix_1,matrix_2):
     matrix_2_column = len(matrix_2[0])
 
     for i in range(matrix_1_row):
-        for j in range(matrix_2_column):
+        for j in range(matrix_2_column): 
             element_value = 0
             for l in range(matrix_2_column):
                 element_value += (int(str(matrix_1[i][l]))*int(str(matrix_2[l][j])))
