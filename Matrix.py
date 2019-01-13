@@ -72,6 +72,22 @@ def matrix_multiply(matrix_1,matrix_2):
             multi_result_matrix.append(element_value)
     print(multi_result_matrix)
 
-matrix_multiply(matrix_1,matrix_2) 
-        
+matrix_multiply(matrix_1,matrix_2)
 
+#Function 6:
+def matrix_minor(pos, matrix_1):
+    
+
+#Function 7:
+#Matrix Determinants 
+def matrix_determinants(matrix_1):      
+    matrix_row = len(matrix_1)
+
+    if matrix_row == 2:
+        return (int(matrix_1[0][0])*int(matrix_1[1][1])) + int((matrix_1[0][1])*int(matrix_1[1][0])
+
+    for i in range(1,matrix_row,1):
+
+
+    
+#matrix_determinants(create_matrix(2,2,[1,2,3,4]))
